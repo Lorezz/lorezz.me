@@ -1,0 +1,217 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title = "Formify - The Ultimate Form Builder";
+const description = "Create beautiful, logic-driven forms and polls. The perfect alternative to Typeform and Google Forms.";
+---
+
+<Layout title={title} description={description}>
+  <!-- Hero Section -->
+  <div class="hero min-h-[80vh] bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-3xl">
+        <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
+          Formify
+        </h1>
+        <p class="text-2xl md:text-3xl font-semibold mb-6">
+          The brilliant alternative to Typeform, Eru Survey, and Google Forms.
+        </p>
+        <p class="py-6 text-lg opacity-80 mb-8">
+          Create polls, forms, and flows with unmatched flexibility.
+          Choose from single-question, stepped, or group modes.
+          Power your logic with scores and responses.
+        </p>
+        <div class="flex gap-4 justify-center">
+          <button class="btn btn-primary btn-lg shadow-lg hover:scale-105 transition-transform">Get Started Free</button>
+          <button class="btn btn-outline btn-lg hover:scale-105 transition-transform">View Demo</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Presentation Modes -->
+  <section class="py-24 px-4 bg-base-100">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">3 Ways to Present</h2>
+      <p class="text-xl opacity-70">Choose the perfect format for your audience</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <!-- Single Question -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-base-300">
+        <div class="card-body items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mb-6 text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9" />
+            </svg>
+          </div>
+          <h3 class="card-title text-2xl mb-2">Single Question</h3>
+          <p>Focus on one thing at a time. A conversational experience like Typeform, keeping users engaged.</p>
+        </div>
+      </div>
+
+      <!-- Form Group -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-base-300">
+        <div class="card-body items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-secondary/10 flex items-center justify-center mb-6 text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </div>
+          <h3 class="card-title text-2xl mb-2">Form Group</h3>
+          <p>Classic form layout. Group related questions together for efficient data collection.</p>
+        </div>
+      </div>
+
+      <!-- Stepped -->
+      <div class="card bg-base-200 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-base-300">
+        <div class="card-body items-center text-center">
+          <div class="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mb-6 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
+            </svg>
+          </div>
+          <h3 class="card-title text-2xl mb-2">Stepped Flow</h3>
+          <p>Guide users through complex processes step-by-step with clear progress indicators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Logic Section -->
+  <section class="py-24 bg-base-200">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
+      <div class="flex-1 space-y-8">
+        <h2 class="text-4xl font-bold">Powerful Logic & Flows</h2>
+        <p class="text-xl opacity-80">Don't just ask questions. Build intelligent conversations.</p>
+
+        <ul class="space-y-4">
+          <li class="flex items-center gap-4 p-4 bg-base-100 rounded-lg shadow-sm">
+            <span class="badge badge-primary badge-lg">✓</span>
+            <span class="text-lg font-medium">Organize questions and groups into dynamic flows</span>
+          </li>
+          <li class="flex items-center gap-4 p-4 bg-base-100 rounded-lg shadow-sm">
+            <span class="badge badge-secondary badge-lg">✓</span>
+            <span class="text-lg font-medium">Route by score or specific responses</span>
+          </li>
+          <li class="flex items-center gap-4 p-4 bg-base-100 rounded-lg shadow-sm">
+            <span class="badge badge-accent badge-lg">✓</span>
+            <span class="text-lg font-medium">Shuffle questions for unbiased polling</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex-1 w-full">
+        <div class="mockup-window border bg-base-100 border-base-300 shadow-2xl">
+          <div class="flex justify-center px-4 py-16 bg-base-200/50">
+            <ul class="steps steps-vertical lg:steps-horizontal w-full">
+              <li class="step step-primary">Start</li>
+              <li class="step step-primary">Logic Check</li>
+              <li class="step step-secondary">Custom Path</li>
+              <li class="step">Finish</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="py-24 px-4 bg-base-100">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold mb-4">Everything You Need</h2>
+      <p class="text-xl opacity-70">A complete suite of tools for your data collection</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div class="card bg-base-200 hover:bg-base-300 transition-colors">
+        <div class="card-body">
+          <h3 class="card-title text-primary text-xl mb-2">
+            <span class="text-2xl">🎨</span> 20+ Themes
+          </h3>
+          <p>Personalize your polls with beautiful pre-made themes or create your own unique style.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 hover:bg-base-300 transition-colors">
+        <div class="card-body">
+          <h3 class="card-title text-secondary text-xl mb-2">
+            <span class="text-2xl">📊</span> Rich Stats
+          </h3>
+          <p>Export results, view aggregate data, and analyze with built-in interactive charts.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 hover:bg-base-300 transition-colors">
+        <div class="card-body">
+          <h3 class="card-title text-accent text-xl mb-2">
+            <span class="text-2xl">🔒</span> Privacy First
+          </h3>
+          <p>Anonymous access, email verification, and hidden links. You control who sees what.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-200 hover:bg-base-300 transition-colors">
+        <div class="card-body">
+          <h3 class="card-title text-info text-xl mb-2">
+            <span class="text-2xl">🌍</span> Host or Embed
+          </h3>
+          <p>Host on our platform or seamlessly embed into your own site with a simple code snippet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Demo -->
+  <section class="py-24 bg-neutral text-neutral-content">
+    <div class="max-w-5xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold mb-12">Real-time Analytics Dashboard</h2>
+      <div class="stats stats-vertical lg:stats-horizontal shadow-2xl bg-base-100 text-base-content w-full py-4">
+        <div class="stat place-items-center">
+          <div class="stat-title">Total Responses</div>
+          <div class="stat-value">31K</div>
+          <div class="stat-desc">Jan 1st - Feb 1st</div>
+        </div>
+
+        <div class="stat place-items-center">
+          <div class="stat-title">Completion Rate</div>
+          <div class="stat-value text-success">89%</div>
+          <div class="stat-desc">↗︎ 23% more than last month</div>
+        </div>
+
+        <div class="stat place-items-center">
+          <div class="stat-title">Avg. Time</div>
+          <div class="stat-value text-secondary">2m 15s</div>
+          <div class="stat-desc">Fast & Efficient</div>
+        </div>
+
+        <div class="stat place-items-center">
+          <div class="stat-title">New Users</div>
+          <div class="stat-value">4,200</div>
+          <div class="stat-desc">↘︎ 90 (14%)</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-32 bg-base-200 text-center relative overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-primary blur-3xl"></div>
+      <div class="absolute top-1/2 right-0 w-64 h-64 rounded-full bg-secondary blur-3xl"></div>
+    </div>
+
+    <div class="max-w-3xl mx-auto px-4 relative z-10">
+      <h2 class="text-5xl font-bold mb-8">Ready to Formify?</h2>
+      <p class="text-2xl mb-10 opacity-80">Join thousands of creators making better forms today.</p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div class="join w-full max-w-md shadow-lg">
+          <input class="input input-bordered input-lg join-item w-full" placeholder="Enter your email" />
+          <button class="btn btn-primary btn-lg join-item">Sign Up Free</button>
+        </div>
+      </div>
+      <p class="mt-4 text-sm opacity-60">No credit card required. 14-day free trial.</p>
+    </div>
+  </section>
+</Layout>

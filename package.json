@@ -3,16 +3,19 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --port 3000",
     "build": "astro build",
-    "preview": "astro preview",
+    "preview": "astro preview --port 3000",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.12",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
+    "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.0",
-    "sharp": "^0.34.3"
+    "daisyui": "^5.5.5",
+    "sharp": "^0.34.3",
+    "tailwindcss": "^4.1.17"
   }
 }

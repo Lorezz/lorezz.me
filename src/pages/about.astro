@@ -1,6 +1,6 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import AboutHeroImage from "../assets/blog-placeholder-about.jpg";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
@@ -60,4 +60,82 @@ import Layout from '../layouts/BlogPost.astro';
 		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
 		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
 	</p>
+	 <!-- Hero Section -->
+  <div class="hero min-h-[60vh] bg-base-200 rounded-lg">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold">Hello there!</h1>
+        <p class="py-6">
+          Welcome to your Astro project with Tailwind CSS and DaisyUI. This is
+          a fully responsive layout with beautiful components ready to use.
+        </p>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Astro Framework</h2>
+        <p>Build faster websites with less client-side JavaScript.</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-sm btn-primary">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">Tailwind CSS</h2>
+        <p>Utility-first CSS framework for rapid UI development.</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-sm btn-secondary">Learn More</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card bg-base-100 shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title">DaisyUI</h2>
+        <p>Beautiful component library for Tailwind CSS.</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-sm btn-accent">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Additional Components Showcase -->
+  <div class="divider my-12">DaisyUI Components</div>
+
+
+    <!-- Badge Example -->
+    <div class="flex gap-2 items-center">
+      <div class="badge badge-primary">Primary</div>
+      <div class="badge badge-secondary">Secondary</div>
+      <div class="badge badge-accent">Accent</div>
+      <div class="badge badge-ghost">Ghost</div>
+    </div>
+
+    <div class="my-16">
+      <div class="alert alert-info">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="stroke-current shrink-0 w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+        <span>Info alert with icon!</span>
+      </div>
+    </div>
 </Layout>
