@@ -1,8 +1,104 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ProfileCard from "../components/ProfileCard.astro";
+import SpotlightCard from "../components/SpotlightCard.astro";
+
+const cards = [
+	{
+		name: "Sample McKenzie",
+		role: "Creator of Oxbow UI.com",
+		image: "/imgs/blog-placeholder-5.jpg",
+		bio: "Michael is a visionary leader with over a decade of experience in creating dynamic and user-friendly websites.",
+		twitter: "#_",
+		linkedin: "#_",
+		span: 1,
+		spotlight: false,
+	},
+	{
+		name: "Get to know the people behind our team",
+		role: "",
+		bio: "Our talented team combines creativity, expertise, and dedication to bring innovative solutions to life and empower your projects.",
+		image: "",
+		twitter: "",
+		linkedin: "",
+		span: 1,
+		spotlight: true,
+	},
+	{
+		name: "Juan Echanove",
+		role: "Founder of Pay Oneeer",
+		image: "/imgs/blog-placeholder-2.jpg",
+		bio: "Juan is the founder of Pay Oneeer, a leading fintech company and deep understanding of financial technology.",
+		twitter: "#_",
+		linkedin: "#_",
+		span: 1,
+		spotlight: false,
+	},
+	{
+		name: "Anna Muska",
+		role: "Founder of Fesla",
+		image: "/imgs/blog-placeholder-3.jpg",
+		bio: "Elona is a trailblazing entrepreneur and the founder of Fesla, an innovative company pushing the boundaries of technology and sustainability. She is committed to driving change and making a positive impact on the world.",
+		twitter: "#_",
+		linkedin: "#_",
+		span: 1,
+		spotlight: false,
+	},
+	{
+		name: "Heidi Herrera",
+		role: "COO at Pff Inc",
+		image: "/imgs/blog-placeholder-4.jpg",
+		bio: "Messina is the Chief Operating Officer at Pff Inc. With a keen eye for detail and exceptional organizational skills, she ensures the smooth and efficient operation of the company, driving growth and success.",
+		twitter: "#_",
+		linkedin: "#_",
+		span: 1,
+		spotlight: false,
+	},
+
+	{
+		name: "Juan Echanove",
+		role: "Founder of Pay Oneeer",
+		image: "/imgs/blog-placeholder-2.jpg",
+		bio: "Juan is the founder of Pay Oneeer, a leading fintech company and deep understanding of financial technology.",
+		twitter: "#_",
+		linkedin: "#_",
+		span: 1,
+		spotlight: false,
+	},
+	{
+		name: "Sample McKenzie",
+		role: "Creator of Oxbow UI.com",
+		image: "/imgs/blog-placeholder-5.jpg",
+		bio: "Michael is a visionary leader with over a decade of experience in creating dynamic and user-friendly websites.",
+		twitter: "#_",
+		linkedin: "#_",
+		span: 1,
+		spotlight: false,
+	},
+	{
+		name: "Anna Muska",
+		role: "Founder of Fesla",
+		image: "/imgs/blog-placeholder-3.jpg",
+		bio: "Elona is a trailblazing entrepreneur and the founder of Fesla, an innovative company pushing the boundaries of technology and sustainability. She is committed to driving change and making a positive impact on the world.",
+		twitter: "#_",
+		linkedin: "#_",
+		span: 2,
+		spotlight: false,
+	},
+	{
+		name: "Heidi Herrera",
+		role: "COO at Pff Inc",
+		image: "/imgs/blog-placeholder-4.jpg",
+		bio: "Messina is the Chief Operating Officer at Pff Inc. With a keen eye for detail and exceptional organizational skills, she ensures the smooth and efficient operation of the company, driving growth and success.",
+		twitter: "#_",
+		linkedin: "#_",
+		span: 2,
+		spotlight: false,
+	},
+];
 ---
 <Layout>
-	<main class="v-screen h-screen flex flex-col gap-6">
+	<div class="v-full h-full flex flex-col gap-6">
 		<h1 class="text-6xl">🧑‍🚀 Hello, Astronaut!</h1>
 		<img loading="eager" fetchpriority="high" src="/bg.webp" alt="" class="blur-lg absolute -z-50 -translate-x-1/2 inset-x-1/2 -inset-y-full w-[2353px] h-[1969px] object-cover max-w-[unset]"/>
 		<p>
@@ -34,5 +130,34 @@ import Layout from "../layouts/Layout.astro";
 			<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
 			by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
 		</p>
-	</main>
+
+		<div class="max-w-6xl flex flex-col mx-auto w-full py-16 px-4 sm:px-6 lg:px-8">
+			<ul role="list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+				{cards.map((card) =>
+					card.spotlight ? (
+						<SpotlightCard
+							name={card.name}
+							role={card.role}
+							bio={card.bio}
+							span={card.span}
+						/>
+					) : (
+						<ProfileCard
+							name={card.name}
+							role={card.role}
+							image={card.image}
+							bio={card.bio}
+							twitter={card.twitter}
+							linkedin={card.linkedin}
+							span={card.span}
+						/>
+					),
+				)
+				}
+
+			</ul>
+
+		</div>
+
+	</div>
 </Layout>
