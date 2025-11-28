@@ -1,19 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
 const title = "Formify - The Ultimate Form Builder";
-const description = "Create beautiful, logic-driven forms and polls. The perfect alternative to Typeform and Google Forms.";
+const description =
+	"Create beautiful, logic-driven forms and polls. The perfect alternative to Typeform and Google Forms.";
 ---
 
 <Layout title={title} description={description}>
   <!-- Hero Section -->
   <div class="hero min-h-[80vh] bg-base-200">
-    <div class="hero-content text-center">
+    <div class="hero-content text-center relative ">
+      <img loading="eager" fetchpriority="high" src="/bg.webp" alt="" class="blur-lg absolute -z-50 -translate-x-1/2 inset-x-1/2 -inset-y-auto w-[2353px]  object-cover max-w-[unset]"/>
       <div class="max-w-3xl">
         <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-6">
           Formify
         </h1>
         <p class="text-2xl md:text-3xl font-semibold mb-6">
-          The brilliant alternative to Typeform, Eru Survey, and Google Forms.
+          The brilliant alternative to Typeform, Eru Sursvey, and Google Forms.
         </p>
         <p class="py-6 text-lg opacity-80 mb-8">
           Create polls, forms, and flows with unmatched flexibility.
