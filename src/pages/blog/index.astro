@@ -8,27 +8,39 @@ const posts = (await getCollection("blog")).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
- <Layout lang="en">
-		<main>
-			<img loading="eager" fetchpriority="high" src="/bg.webp" alt="" class="blur-lg absolute -z-50 -translate-x-1/2 inset-x-1/2 -inset-y-full w-[2353px] h-[1969px] object-cover max-w-[unset]"/>
-			<section>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
+
+<Layout lang='en'>
+	<div class='p-10 flex items-center justify-center'>
+		<img
+			loading='eager'
+			fetchpriority='high'
+			src='/bg.webp'
+			alt=''
+			class='blur-lg absolute -z-50 -translate-x-1/2 inset-x-1/2 -inset-y-full w-[2353px] h-[1969px] object-cover max-w-[unset]'
+		/>
+		<section>
+			<ul class='grid gap-4 grid-cols-1 xl:grid-cols-2 xl:gap-8'>
+				{
+					posts.map((post) => (
+						<li class=''>
+							<a href={`/blog/${post.id}/`}>
+								{post.data.heroImage && (
+									<Image
+										width={720}
+										height={360}
+										src={post.data.heroImage}
+										alt=''
+									/>
+								)}
+								<h4 class='title'>{post.data.title}</h4>
+								<p class='date'>
+									<FormattedDate date={post.data.pubDate} />
+								</p>
+							</a>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+	</div>
 </Layout>

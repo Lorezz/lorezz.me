@@ -16,5 +16,7 @@ const { Content } = await render(post);
 ---
 
 <Layout {...post.data}>
-	<Content />
+	<div class='p-10 flex items-center justify-center'>
+		<div class='prose'><Content /></div>
+	</div>
 </Layout>

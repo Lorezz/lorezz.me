@@ -9,23 +9,22 @@ const {
 	pubDate,
 	updatedDate,
 	heroImage,
-	showHeaders= true,
+	showHeaders = true,
 } = Astro.props;
 ---
 
-<html lang="en">
+<html lang='en'>
 	<head>
-		<SEO title={title } description={description} />
+		<SEO title={title} description={description} />
 	</head>
 	<body>
 		{showHeaders && <Header />}
-		<main>
+		<main class='p-5 w-screen'>
 			<slot />
 		</main>
 		{showHeaders && <Footer />}
-	</body>
-	<script>
-console.log(`
+	</body><script>
+		console.log(`
 .##........#######..########..########.########.########
 .##.......##.....##.##.....##.##............##.......##.
 .##.......##.....##.##.....##.##...........##.......##..
@@ -33,6 +32,6 @@ console.log(`
 .##.......##.....##.##...##...##.........##.......##....
 .##.......##.....##.##....##..##........##.......##.....
 .########..#######..##.....##.########.########.########
-`)
-</script>
+`);
+	</script>
 </html>
