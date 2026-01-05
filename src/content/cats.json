@@ -1,0 +1,22 @@
+[
+  {
+    "title": "cats",
+    "slug": "cats"
+  },
+  {
+    "title": "cows",
+    "slug": "cows"
+  },
+  {
+    "title": "mushrooms",
+    "slug": "mushrooms"
+  },
+  {
+    "title": "dogs",
+    "slug": "dogs"
+  },
+  {
+    "title": "plants",
+    "slug": "plants"
+  }
+]

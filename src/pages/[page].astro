@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const pagesSources = await getCollection("pages");
+  const pages = pagesSources?.[0].data;
+  return pages.map((p) => ({
+    params: { page: p.slug },
+    props: p,
+  }));
+}
+
+const page = Astro.props;
+const pageSlug = Astro.params.page;
+---
+
+<Layout>
+  <div class='p-10 flex flex-col items-center justify-center'>
+    <h1 class='text-3xl'>{page.title}</h1>
+    <div class='mt-4'>slug: {pageSlug}</div>
+    <div class='mt-4'>
+      categories: {
+        page.categories?.map((c) => (
+          <a class='link link-primary mr-2' href={`/${c.toLocaleLowerCase()}`}>
+            {c}
+          </a>
+        ))
+      }
+    </div>
+    <div class='mt-4 prose'><div set:html={page.body} /></div>
+  </div>
+</Layout>
