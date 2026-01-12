@@ -1,50 +1,96 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
+
 <Layout
-  title="Lorezz"
-  description="Lorezz is a full stack web developer."
-  showHeaders={false}
+    title='Lorezz'
+    description='Lorezz is a full stack web developer.'
+    showHeaders={false}
 >
-<div class="text-base leading-[1.5em] absolute h-full w-full m-0 p-0 antialiased">
-    <canvas id="starfield" width="1280" height="720" class="absolute"></canvas>
-    <div class="fixed top-0 -left-[100vw] h-full w-full overflow-visible opacity-100">
-        <div class="fixed overflow-hidden top-0 -left-1/2 bg-[#20232d]/80 w-full h-full transition-all duration-500 ease-[cubic-bezier(0.7,0,0.3,1)] border-r border-[#15171e] -skew-x-[25deg] max-lg:left-0 max-lg:w-full max-lg:skew-x-0"></div>
-    </div>
-    <section class="fixed left-0 top-0 w-1/2 h-full transition-all duration-300 ease-[cubic-bezier(0,0,0.58,1)] opacity-100 max-lg:relative max-lg:w-full max-lg:h-auto max-lg:py-[100px] max-lg:pb-[150px]">
-        <img src="logo.png" alt="Lorezz" loading="lazy" class="absolute left-[10%] top-[10%] max-w-[200px] max-lg:relative max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:my-[25px]">
-        <div class="absolute z-0 left-0 top-[50vh] w-full px-[10%] -translate-y-1/2 text-left opacity-100 visible max-lg:relative max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-auto max-lg:text-center">
-            <h2 class="text-2xl font-bold mb-4">Hi, my name is Lorenzo, aka Lorezz.</h2>
-            <p class="mb-4">I'm a full stack web developer.</p>
-            <p class="mb-4">You can write me an email at <a target="_blank" href="mailto:lorezz@lorezz.net" class="transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0] hover:no-underline hover:outline-none focus:outline-none focus:text-white active:outline-none active:text-white">lorezz@lorezz.net</a></p>
-            <p class="mb-4">Or you can find me on the following socials</p>
-            <div class="flex items-center max-lg:justify-center">
-                <a href="https://github.com/lorezz" class="mr-[10px] transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0]">
-                    <span class="text-[32px] text-white">
-                        <i class="fab fa-github-square"></i>
-                    </span></a>
-                <a href="https://twitter.com/wisejerk" class="mr-[10px] transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0]">
-                    <span class="text-[32px] text-white">
-                        <i class="fab fa-twitter-square"></i>
-                    </span>
-                </a>
-                <a href="https://www.linkedin.com/in/lorenzoponticelli" class="mr-[10px] transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0]">
-                    <span class="text-[32px] text-white">
-                        <i class="fab fa-linkedin"></i>
-                    </span>
-                </a>
-                <a href="https://medium.com/@lorezz" class="mr-[10px] transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0]">
-                    <span class="text-[32px] text-white">
-                        <i class="fab fa-medium"></i>
-                    </span>
-                </a>
+    <div
+        class='text-base leading-[1.5em] absolute h-full w-full m-0 p-0 antialiased'
+    >
+        <canvas id='starfield' width='1280' height='720' class='absolute'
+        ></canvas>
+        <div
+            class='fixed top-0 -left-[100vw] h-full w-full overflow-visible opacity-100'
+        >
+            <div
+                class='fixed overflow-hidden top-0 -left-1/2 bg-[#20232d]/80 w-full h-full transition-all duration-500 ease-[cubic-bezier(0.7,0,0.3,1)] border-r border-[#15171e] -skew-x-[25deg] max-lg:left-0 max-lg:w-full max-lg:skew-x-0'
+            >
             </div>
-	      <div class="text-[7px] mt-[10px]">
-            {new Date().getFullYear()} © Lorezz
         </div>
-        </div>
-    </section>
-
-
-</div>
+        <section
+            class='fixed left-0 top-0 w-1/2 h-full transition-all duration-300 ease-[cubic-bezier(0,0,0.58,1)] opacity-100 max-lg:relative max-lg:w-full max-lg:h-auto max-lg:py-[100px] max-lg:pb-[150px]'
+        >
+            <div
+                class='absolute z-0 left-0 top-[10vh] w-full px-[10%] text-left opacity-100 visible max-lg:relative max-lg:left-1/2 max-lg:-translate-x-1/2 max-lg:top-auto max-lg:text-center'
+            >
+                <div class='flex flex-col'>
+                    <div class='mx-auto lg:mx-2'>
+                        <img
+                            src='logo.png'
+                            alt='Lorezz logo'
+                            loading='lazy'
+                            class='max-w-[200px] my-10'
+                            width='200px'
+                            height='200px'
+                        />
+                    </div>
+                    <h2 class='text-2xl font-bold mb-4'>
+                        Hi, my name is Lorenzo, aka Lorezz.
+                    </h2>
+                    <p class='mb-4'>I'm a full stack web developer.</p>
+                    <p class='mb-4'>
+                        You can write me an email at <a
+                            target='_blank'
+                            href='mailto:lorezz@lorezz.net'
+                            class='transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0] hover:no-underline hover:outline-none focus:outline-none focus:text-white active:outline-none active:text-white'
+                            >lorezz@lorezz.net</a
+                        >
+                    </p>
+                    <p class='mb-4'>
+                        Or you can find me on the following socials
+                    </p>
+                    <div class='flex items-center max-lg:justify-center'>
+                        <a
+                            href='https://github.com/lorezz'
+                            class='mr-[10px] transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0]'
+                        >
+                            <span class='text-[32px] text-white'>
+                                <i class='fab fa-github-square'></i>
+                            </span></a
+                        >
+                        <a
+                            href='https://twitter.com/wisejerk'
+                            class='mr-[10px] transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0]'
+                        >
+                            <span class='text-[32px] text-white'>
+                                <i class='fab fa-twitter-square'></i>
+                            </span>
+                        </a>
+                        <a
+                            href='https://www.linkedin.com/in/lorenzoponticelli'
+                            class='mr-[10px] transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0]'
+                        >
+                            <span class='text-[32px] text-white'>
+                                <i class='fab fa-linkedin'></i>
+                            </span>
+                        </a>
+                        <a
+                            href='https://medium.com/@lorezz'
+                            class='mr-[10px] transition-all duration-200 ease-[cubic-bezier(0.42,0,0.58,1)] cursor-pointer no-underline text-white hover:text-[#86c9f0]'
+                        >
+                            <span class='text-[32px] text-white'>
+                                <i class='fab fa-medium'></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class='text-[7px] mt-[10px]'>
+                        {new Date().getFullYear()} © Lorezz
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </Layout>
