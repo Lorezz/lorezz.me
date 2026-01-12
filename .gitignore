@@ -22,3 +22,6 @@ pnpm-debug.log*
 .mcp.json
 # jetbrains setting folder
 .idea/
+
+# Local Netlify folder
+.netlify
