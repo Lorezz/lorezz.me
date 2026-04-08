@@ -5,11 +5,13 @@ import sitemap from '@astrojs/sitemap';
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from 'astro/config';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://lorezz.me',
-	integrations: [mdx(), sitemap()],
-	vite: {
+    site: 'https://lorezz.me',
+    integrations: [mdx(), sitemap(), react()],
+    vite: {
     plugins: [tailwindcss()],
   }
 });
