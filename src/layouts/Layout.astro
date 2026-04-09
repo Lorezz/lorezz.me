@@ -4,27 +4,33 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Navbar.astro";
 
 const {
-	title = "boh",
-	description = "mah",
-	pubDate,
-	updatedDate,
-	heroImage,
-	showHeaders = true,
+  title = "boh",
+  description = "mah",
+  pubDate,
+  updatedDate,
+  heroImage,
+  showHeaders = true,
 } = Astro.props;
 ---
 
 <html lang='en'>
-	<head>
-		<SEO title={title} description={description} />
-	</head>
-	<body>
-		{showHeaders && <Header />}
-		<main class='p-5 w-screen'>
-			<slot />
-		</main>
-		{showHeaders && <Footer />}
-	</body><script>
-		console.log(`
+  <head>
+    <SEO title={title} description={description} />
+  </head>
+  <body class='flex flex-col min-h-screen'>
+    {showHeaders && <Header />}
+    <main class='p-5 w-screen flex-1 grow-1'>
+      <slot />
+    </main>
+    {
+      showHeaders && (
+        <div class='self-end w-full'>
+          <Footer />
+        </div>
+      )
+    }
+  </body><script>
+    console.log(`
 .##........#######..########..########.########.########
 .##.......##.....##.##.....##.##............##.......##.
 .##.......##.....##.##.....##.##...........##.......##..
@@ -33,5 +39,5 @@ const {
 .##.......##.....##.##....##..##........##.......##.....
 .########..#######..##.....##.########.########.########
 `);
-	</script>
+  </script>
 </html>

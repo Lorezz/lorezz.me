@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MyScene from "../components/MyScene.tsx";
+---
+
+<Layout
+  title='Lorezz'
+  description='Lorezz is a full stack web developer.'
+  showHeaders={false}
+>
+  <div class='relative w-full h-screen my-10'>
+    <div class='absolute w-full h-full'>
+      <MyScene class='rounded-xl' client:only='react' />
+    </div>
+    <div
+      class='rounded-xl absolute z-10 flex items-center justify-center w-full h-full bg-black/50'
+    >
+      <h1 class='text-6xl font-bold shadow-xl'>HELLO</h1>
+    </div>
+  </div></Layout
+>
